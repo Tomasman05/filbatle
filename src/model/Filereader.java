@@ -1,6 +1,12 @@
-// Készítette: Vitovszki Tamás
-// Dátum: 2023.10.05.
-// Osztály: Szoft/II/2/N
+/*
+* File: Filereader.java
+* Author: Vitovszki Tamás
+* Copyright: 2023, Vitovszki Tamás
+* Group: Szoft II/2/N
+* Date: 2023-10-05
+* Github: https://github.com/Tomasman05/
+* Licenc: GNU GPL
+*/
 package model;
 
 import java.io.File;
