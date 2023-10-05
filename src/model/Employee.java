@@ -15,7 +15,7 @@ public class Employee {
     private String city;
     private String address;
     private String birth;
-    private int salary;
+    private double salary;
     
     public String getName() {
         return name;
@@ -35,10 +35,10 @@ public class Employee {
     public void setBirth(String birth) {
         this.birth = birth;
     }
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
     public String getAddress() {
