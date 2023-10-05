@@ -16,9 +16,10 @@ import java.util.Scanner;
 
 public class Filereader {
 
-    final private String FILENAME ="filbt.txt";
+    final private String FILENAME = "filbt.txt";
     ArrayList<Employee> emplist = new ArrayList<>();
-    public ArrayList<Employee> loadData(){
+
+    public ArrayList<Employee> loadData() {
         try {
             tryLoadData();
         } catch (FileNotFoundException e) {
@@ -27,19 +28,20 @@ public class Filereader {
         }
         return emplist;
     }
-    public ArrayList<Employee> tryLoadData() throws FileNotFoundException{
-        
+
+    public ArrayList<Employee> tryLoadData() throws FileNotFoundException {
+
         File file = new File(FILENAME);
-        Scanner sc = new Scanner(file,"utf-8");
-        while(sc.hasNextLine()){
+        Scanner sc = new Scanner(file, "utf-8");
+        while (sc.hasNextLine()) {
             String line = sc.nextLine();
-            String [] list = line.split(":");
+            String[] list = line.split(":");
             Employee emp = new Employee();
             emp.setName(list[0]);
             emp.setCity(list[1]);
             emp.setAddress(list[2]);
             emp.setBirth(list[3]);
-            emp.setSalary (Integer.parseInt(list[4]));
+            emp.setSalary(Integer.parseInt(list[4]));
             this.emplist.add(emp);
         }
         sc.close();
